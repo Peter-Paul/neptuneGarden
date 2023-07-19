@@ -4,71 +4,84 @@ import Home from './pages/home';
 import Footer from './shared/footer';
 import Nav from './shared/nav';
 import NftPage from './pages/nft';
+import { useCallback, useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux"
+import NftService from './services/nfts';
+import { connectUser, loadState } from './state/app.reducers';
+import { AlchemyProvider, BrowserProvider, Contract, formatEther } from 'ethers';
+import neptuneAbi from "./abis/neptune.json"
+import Admin from './pages/admin';
+
 
 function App() {
-  const nfts = [
-    {
-      cid:"bafybeid5jyrgwotnef2igvguencmnu7hxt64kov5o6f3bq4wovh665mbmi",
-      name:"neptune1"
-    },
-    {
-      cid:"bafybeic47sjbl5pkrb5xzyg5w4nvvwf5vuyb4mmbzes2mhpscucdc7lzy4",
-      name:"neptune2"
-    },
-    {
-      cid:"bafybeigrxqsoq4evusqnq4o52hgsohv6isou6hixzt37sjahjun2l3h3lu",
-      name:"neptune3"
-    },
-    {
-      cid:"bafybeic4cug5fjqdd7645dqqs7pzycg53xsna2uenphjkqzwrqmhjdbl4y",
-      name:"neptune4"
-    },
-    {
-      cid:"bafybeihxfknvcs5lfrogt3zpetdshajadxero7icqzhejn5a4brhtrj45a",
-      name:"neptune5"
-    },
-    {
-      cid:"bafybeigklvztt6omwq3ltwqbsuzehcqxkazivjl5eh6sas7zoz7n6rrrlm",
-      name:"neptune6"
-    },
-    {
-      cid:"bafybeic4xuxcgxvvxylvsqg5kmluhdh5mwi552lwew3s2ea472zmwzfn3a",
-      name:"neptune7"
-    },
-    {
-      cid:"bafybeiccbid2wjdmqdmff62eyr5tbulthqosaufz7hxr3dsdw6ugjkw4ly",
-      name:"neptune8"
-    },
-    {
-      cid:"bafybeicg2lmy4t6booo5efoyquoqpvwx4zruenu5hmofthqz5fv5g6kwh4",
-      name:"neptune9"
-    },
-    {
-      cid:"bafybeid3vqgkegz3dhwwtkcyfqy4xhvaapseibajz546pdshylssdvkjqu",
-      name:"neptune10"
-    },
-    {
-      cid:"bafybeigycim5yrpfgmsbyyg4ozcxg4tuyijdqrj2zayz4iltdmlbck245y",
-      name:"neptune11"
-    },
-    {
-      cid:"bafybeicnkapv24pvkhihmfllefn3bfawu7wx2eqkfm6qc7pkhxxkujaega",
-      name:"neptune12"
-    },
-    {
-      cid:"bafybeidfu3hunakb7bw5x6crqlrzlyoz532ahuwn6tposjl2hsw64d4wju",
-      name:"neptune13"
+  const {nfts,mainRpc,testRpc} = useSelector((state) => state.app)
+  const dispatch = useDispatch()
+
+  
+  const onInit = useCallback( async () => {
+    const providers = {
+        main: new AlchemyProvider("matic",mainRpc),
+        test: new AlchemyProvider("maticmum",testRpc)
     }
-  ]
+    const admins = (process.env.REACT_APP_ADMINS).split(",")
+    const testnet = process.env.REACT_APP_TESTNET
+    const isTestNet = testnet && parseInt(testnet) < 2 && parseInt(testnet) >= 0 && parseInt(testnet)
+    const neptuneAddress = isTestNet ? process.env.REACT_APP_TESTNET_CONTRACT : process.env.REACT_APP_MAINNET_CONTRACT
+    const nftContract = new Contract(neptuneAddress, neptuneAbi, isTestNet?providers.test:providers.main)
+    console.log(nftContract)
+    // Load contract info
+    const nftMaxSupply = (await nftContract.MAX_SUPPLY()).toString()
+    const nftMintPrice = formatEther( (await nftContract.MINT_PRICE()) ).toString()
+    const nftSupply = (await nftContract.totalSupply()).toString()
+    const nftPaused = (await nftContract.paused())
+    const nftAuctioned = (await nftContract.auctioned())
+    const nftEthBalance = isTestNet ? 
+                          (await providers.test.getBalance(neptuneAddress)).toString() : 
+                          (await providers.main.getBalance(neptuneAddress)).toString()
+    // Load backend info
+    const baseUrl = process.env.REACT_APP_BACKEND_BASE_URL
+    const nftService = new NftService(baseUrl)
+    const nftList = await nftService.getNfts()
+
+    dispatch( loadState({nfts:nftList,admins,neptuneAddress,nftMaxSupply,nftMintPrice,nftSupply,nftPaused,nftEthBalance,nftAuctioned}) )
+  },[dispatch,mainRpc,testRpc])
+
+  useEffect( () => { 
+    onInit() 
+  }, [onInit] )
+
+  const connectWallet = () => {
+    const provider = new BrowserProvider(window.ethereum)
+    if (window.ethereum) {
+        provider.send("eth_requestAccounts", []).then(async () => {
+          const signer  = await provider.getSigner()
+          const userAddress = await signer.getAddress()
+
+          dispatch( connectUser({userAddress,connected:true}) )
+        })
+    } else {
+        console.log("Please Install Metamask!!!");
+    }
+  }
+
+  const disconnectWallet = () =>  dispatch( connectUser( {userAddress:undefined,connected:false} ) )
+
+  const styles = {
+    content:{
+      minHeight:"40vh"
+    }
+  }
+
   return (
       <Router>
         <div>
           {/* NAVIGATION */}
           <div className='mb-5 sticky-top'>
-            <Nav />
+            <Nav connectWallet={connectWallet} disconnectWallet={disconnectWallet} />
           </div>
-          <br className='my-5'></br>
-          <div className="container-fluid my-5">
+          {/* <br className='my-5'></br> */}
+          {/* BODY */}
+          <div className="container my-5" style={styles.content}>
             <Routes>
               <Route  exact path="/"
                       element={ <Home nfts={nfts} /> }
@@ -76,9 +89,13 @@ function App() {
               <Route  exact path="/:name"
                       element={ <NftPage nfts={nfts} /> }
               />
+              <Route  exact path="/admin"
+                      element={ <Admin nfts={nfts} /> }
+              />
             </Routes>
           </div>
           <br className='my-5'></br>
+          {/* FOOTER */}
           <div className='mt-5'>
             <Footer />
           </div>

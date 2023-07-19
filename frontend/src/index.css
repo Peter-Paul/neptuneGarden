@@ -1,0 +1,53 @@
+body{
+  background-color: #009dc4;
+}
+.newNft-card{
+  width: 350px
+}
+.newNft-holder {
+  width: 370px;
+  height: 500px;
+  min-height: 500px;
+  position: relative;
+  border-radius: 5px;
+}
+.newNft-img{
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+
+.homeNft-holder {
+  width: 250px;
+  height: 250px;
+  min-height: 250px;
+  position: relative;
+  border-radius: 5px;
+}
+.homeNft-img{
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.logo{
+  color: #009dc4;
+  font-size: 28px;
+}
+
+.text-sea{
+  color: #009dc4;
+}
+
+.bg-sea{
+  background-color: #009dc4;
+}
+
+h2,h3,h4,h5, .sea-text,.logo{
+  font-family: "Lilita One";
+}

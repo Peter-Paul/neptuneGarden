@@ -7,28 +7,32 @@ import SlideNft from './slideNft';
 
 function Slider({nfts}) {
     return ( 
-        <div>
+        <div className='card'>
+          <div className='card-body'>
+            <h3 className='text-center text-sea mb-3'>Collection</h3>
+            <hr className='text-sea' />
             <Swiper
                 modules={[Autoplay ]}
+                loop={true}
                 // spaceBetween={180}
-                // slidesPerView={3}
+                // slidesPerView={5}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                   }}
                 breakpoints={{
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 0,
-                },
-                // 768: {
-                //     slidesPerView: 3,
-                //     spaceBetween: 40,
-                // },
-                1880: {
-                    slidesPerView: 4,
-                    spaceBetween: 50,
-                },
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                      },
+                      768: {
+                        slidesPerView: 4,
+                        spaceBetween: 100,
+                      },
+                      1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 180,
+                      },
                 }}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
@@ -36,13 +40,9 @@ function Slider({nfts}) {
                 {nfts.map( (nft) => (
                     <SwiperSlide id={nft.cid} ><SlideNft nft={nft} /></SwiperSlide>
                 ) )}
-                {/* <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide> */}
             </Swiper>
+            <hr className='text-sea' />
+          </div>
         </div>
      );
 }

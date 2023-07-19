@@ -1,7 +1,7 @@
 function About() {
     return ( 
         <>
-            <div className="text-center">
+            <div className="text-center text-light">
                 <h3>About Neptune Garden</h3>
                 <p className="mt-4">Neptune Garden is an NFT collection inspired by the Neptune Garden collections.</p>
                 <p className="mt-4">We are Neptune Garden. We grow together, building a strong community with a definite future.</p>
