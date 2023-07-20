@@ -4,7 +4,7 @@ function SlideNft({nft}) {
         <>
 
             <div  className="homeNft-holder">
-                <div style={{backgroundImage:`url(https://ipfs.io/ipfs/${nft.cid}/neptune.png)`}} 
+                <div style={{backgroundImage:`url(${nft.Image})`}} 
                 className="homeNft-img" alt=""></div>
             </div>
         

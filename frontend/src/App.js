@@ -11,6 +11,7 @@ import { connectUser, loadState } from './state/app.reducers';
 import { AlchemyProvider, BrowserProvider, Contract, formatEther } from 'ethers';
 import neptuneAbi from "./abis/neptune.json"
 import Admin from './pages/admin';
+import NftCollection from './pages/collection';
 
 
 function App() {
@@ -88,6 +89,9 @@ function App() {
               />
               <Route  exact path="/:name"
                       element={ <NftPage nfts={nfts} /> }
+              />
+              <Route  exact path="/collection"
+                      element={ <NftCollection nfts={nfts} /> }
               />
               <Route  exact path="/admin"
                       element={ <Admin nfts={nfts} /> }

@@ -3,563 +3,164 @@ import axios from "axios"
 export default class NftService{
     default = [
         {
-          cid:"bafybeid5jyrgwotnef2igvguencmnu7hxt64kov5o6f3bq4wovh665mbmi",
-          name:"neptune1",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreiepopglebcyyq6fgfi3qfvkxb27kkcnweekb6lcgogdy3sfux3ud4",
+          New:true
         },
         {
-          cid:"bafybeic47sjbl5pkrb5xzyg5w4nvvwf5vuyb4mmbzes2mhpscucdc7lzy4",
-          name:"neptune2",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreianufxivkxx2gehui32nmgywf4j6srndtoptlaoadkwp233fxgkeq",
+          New:true
         },
         {
-          cid:"bafybeigrxqsoq4evusqnq4o52hgsohv6isou6hixzt37sjahjun2l3h3lu",
-          name:"neptune3",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreihy3ryzk3zwphkkclurmbfgpk5zi67gpwcev3adz5k24pvgr55vhi",
+          New:true
         },
         {
-          cid:"bafybeic4cug5fjqdd7645dqqs7pzycg53xsna2uenphjkqzwrqmhjdbl4y",
-          name:"neptune4",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreiga4b4kcvez4vyjs6kxilrmtjcwtbndiq5oms7spjzxhp574kpeoe",
+          New:true
         },
         {
-          cid:"bafybeihxfknvcs5lfrogt3zpetdshajadxero7icqzhejn5a4brhtrj45a",
-          name:"neptune5",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreict2dw7t7buhxpsruhpqv4y6shbedtmpkmra3xjec5edk4gbmnoni",
+          New:true
         },
         {
-          cid:"bafybeigklvztt6omwq3ltwqbsuzehcqxkazivjl5eh6sas7zoz7n6rrrlm",
-          name:"neptune6",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreihxbki7tsxh7njtvcbkoh4qhxleghqemqpubtez5g5xdt534z5p74",
+          New:true
         },
         {
-          cid:"bafybeic4xuxcgxvvxylvsqg5kmluhdh5mwi552lwew3s2ea472zmwzfn3a",
-          name:"neptune7",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreiaxfhy4wepnr6ghsxsiiy4uteklmobe5zdrtexe7sf4p63am34dku",
+          New:true
         },
         {
-          cid:"bafybeiccbid2wjdmqdmff62eyr5tbulthqosaufz7hxr3dsdw6ugjkw4ly",
-          name:"neptune8",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreibf2tmucwobgryr6uyj7ro45sxeown6eujvpkpy2ibzo7z5yhett4",
+          New:true
         },
         {
-          cid:"bafybeicg2lmy4t6booo5efoyquoqpvwx4zruenu5hmofthqz5fv5g6kwh4",
-          name:"neptune9",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreideatftmpsq67ltjlkr2uumpcl34xdzr754utdttjqcsybsbkvf3q",
+          New:true
         },
         {
-          cid:"bafybeid3vqgkegz3dhwwtkcyfqy4xhvaapseibajz546pdshylssdvkjqu",
-          name:"neptune10",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreigqeqjsmvvcwfumvilg5b4gtdj6bo4yddzreug5daere66vvjceue",
+          New:true
         },
         {
-          cid:"bafybeigycim5yrpfgmsbyyg4ozcxg4tuyijdqrj2zayz4iltdmlbck245y",
-          name:"neptune11",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreid2xsvrwphoicvqtsgplplhx3vm6c53uet7vqlnftor5mqf2ustra",
+          New:true
         },
         {
-          cid:"bafybeicnkapv24pvkhihmfllefn3bfawu7wx2eqkfm6qc7pkhxxkujaega",
-          name:"neptune12",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreiazwu44rtzvy4r22l7gu7mpctbqt2nt6ts2pez3nxkuvq6isdlycm",
+          New:true
         },
         {
-          cid:"bafybeidfu3hunakb7bw5x6crqlrzlyoz532ahuwn6tposjl2hsw64d4wju",
-          name:"neptune13",
-          address:"0xc0c53d02295c95ce03f3ac59e8186827065cef09",
-          owner:"0xc58f0e2007b4c52597042cb212a3683af2abda06",
-          price:"0.05",
-          ipfs:{
-              "image": "ipfs://QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1.png",
-              "attributes": [
-                {
-                  "trait_type": "Background",
-                  "value": "Human"
-                },
-                {
-                  "trait_type": "Skin",
-                  "value": "Pink Hairband"
-                },
-                {
-                  "trait_type": "Head",
-                  "value": "White Qipao with Fur"
-                },
-                {
-                  "trait_type": "Eyes",
-                  "value": "Daydreaming"
-                },
-                {
-                  "trait_type": "Clothes",
-                  "value": "Lipstick"
-                },
-                {
-                  "trait_type": "Accessories",
-                  "value": "Gloves"
-                }
-              ]
-          },
-          minted:true,
-          assets:[
-            "0x53676502Dba17E836E14ec863bAAEA3EB6C6b9E0", "0x98E81897521827f6559357f64be65855d1C92409"
-          ],
-          nfts:[
-            {}
-          ]
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreig7u4uix3wmvpxqcng5hdoueyocmc74fj5pvygfuegqr7hnyasg7y",
+          New:true
+        },
+        {
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreihjtzxrzvy3dfhp6n7sdy2xmk7lbk7vkf3nymknqwsgvb4w5wvkka",
+          New:true
+        },
+        {
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreihlzuyg37pzxu74fc4bzumsuz2tnturpbtrqf6p77plpdyygo5yza",
+          New:true
+        },
+        {
+          Background:"Background",
+          Skin:"Skin",
+          Head:"Head",
+          Eyes:"Eyes",
+          Clothes:"Clothes",
+          Accessories:"Accesso",
+          Image:"https://ipfs.io/ipfs/bafkreih2evdj7z2sdi4ulqvgbw6tsc34czgqf6sgeta43n665sft7e4ujy",
+          New:true
         }
       ]
     

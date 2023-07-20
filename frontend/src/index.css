@@ -35,6 +35,22 @@ body{
   border-radius: 5px;
 }
 
+.logo-holder {
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  position: relative;
+  border-radius: 200px;
+}
+.logo-img{
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+
+
 .logo{
   color: #009dc4;
   font-size: 28px;

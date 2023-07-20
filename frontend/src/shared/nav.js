@@ -27,11 +27,11 @@ function Nav({connectWallet,disconnectWallet}) {
                                 <Link to={"/"} className="nav-link active" aria-current="page" >Home</Link>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" >Collection</div>
+                                <Link to={"/collection"} className="nav-link active" aria-current="page" >Collection</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <div className="nav-link" >Stake</div>
-                            </li>
+                            </li> */}
                             {
                                 connected && admins.includes(userAddress) &&
                                 <li className="nav-item">

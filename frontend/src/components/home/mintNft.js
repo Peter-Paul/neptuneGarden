@@ -7,7 +7,7 @@ function MintNft({nft}) {
             <div className="card-body">
 
                 <div  className="newNft-holder shadow">
-                    <div style={{backgroundImage:`url(https://ipfs.io/ipfs/${nft.cid}/neptune.png)`}} 
+                    <div style={{backgroundImage:`url(${nft.Image})`}} 
                     className="newNft-img" alt=""></div>
                 </div>
             </div>

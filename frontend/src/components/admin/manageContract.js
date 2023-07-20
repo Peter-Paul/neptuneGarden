@@ -8,7 +8,6 @@ function ManageContract() {
     
     const {nftEthBalance,nftPaused,nftAuctioned,neptuneAddress} = useSelector((state) => state.app)
     const [contract,setContract] = useState(undefined)
-    // const [signer,setSigner] = useState(undefined)
     const [pauseProcess,setPauseProcess] = useState(false)
     const [auctionProcess,setAuctionProcess] = useState(false)
     const [withdrawProcess,setWithdrawProcess] = useState(false)
@@ -32,7 +31,6 @@ function ManageContract() {
             setMintProcess(true)
             const tx =  await contract.setMintPrice(mintPrice)
             const receipt = await tx.wait()
-            // const events = receipt.events
             console.log(receipt)
             setMintProcess(false)
             dispatch(changePause({nftPaused:nftPaused?false:true}))
@@ -45,12 +43,9 @@ function ManageContract() {
     const pause_unpause = async () => {
         try{
             setPauseProcess(true)
-            console.log( contract)
-            console.log( await contract.pause())
-            // const tx = nftPaused ? await contract.unpause() : await contract.pause()
-            // const receipt = await tx.wait()
-            // const events = receipt.events
-            // console.log(receipt)
+            const tx = nftPaused ? await contract.unpause() : await contract.pause()
+            const receipt = await tx.wait()
+            console.log(receipt)
             setPauseProcess(false)
             dispatch(changePause({nftPaused:nftPaused?false:true}))
 
