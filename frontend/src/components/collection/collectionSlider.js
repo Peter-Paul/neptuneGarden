@@ -30,8 +30,8 @@ function CollectionSlider({nfts}) {
                             spaceBetween: 100,
                         },
                         1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 180,
+                            slidesPerView: 4,
+                            spaceBetween: 250,
                         },
                     }}
                     onSlideChange={() => console.log('slide change')}
