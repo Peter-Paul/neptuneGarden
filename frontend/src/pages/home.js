@@ -1,4 +1,5 @@
 // import MintNft from "../components/home/mintNft";
+import { Link } from "react-router-dom";
 import MintSlider from "../components/home/mintSlider";
 import Slider from "../components/home/slider";
 import NftInfo from "./nftInfo";
@@ -26,7 +27,9 @@ function Home({nfts}) {
                                     <hr className="text-light mb-3" />
                                     <h1 className="display-4 text-light mb-5">Mint your 1st NFT in the Neptune Garden for Free!</h1>
                                     <div class="d-grid gap-2 col-6">
-                                        <button className="btn btn-lg btn-outline-light ">View Collection</button>
+                                        <Link to="/collection">
+                                            <button className="btn btn-lg btn-outline-light ">View Collection</button>
+                                        </Link>
                                     </div>
                                 </div>
                         </div>
