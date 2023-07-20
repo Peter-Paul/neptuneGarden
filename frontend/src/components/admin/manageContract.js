@@ -35,7 +35,7 @@ function ManageContract() {
             setMintProcess(false)
             dispatch(changePause({nftPaused:nftPaused?false:true}))
 
-        }catch(err){console.log(err)}
+        }catch(err){console.log(err);setMintProcess(false)}
     }
 
     const handlePriceChange = (e) => setMintPrice(  e.target.value  )
@@ -49,7 +49,7 @@ function ManageContract() {
             setPauseProcess(false)
             dispatch(changePause({nftPaused:nftPaused?false:true}))
 
-        }catch(err){console.log(err)}
+        }catch(err){console.log(err);setPauseProcess(false)}
     }
 
     const updateAuction = async () => {
@@ -62,7 +62,7 @@ function ManageContract() {
             setAuctionProcess(false)
             dispatch(changeAuction({nftAuctioned:nftAuctioned?false:true}))
 
-        }catch(err){console.log(err)}
+        }catch(err){console.log(err);setAuctionProcess(false)}
     }
 
     const onInit = useCallback( async () => {
