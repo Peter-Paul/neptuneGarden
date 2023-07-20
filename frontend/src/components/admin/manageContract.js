@@ -92,9 +92,9 @@ function ManageContract() {
                 </div>
                 <div className="col-6">
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <input name="price" className="form-control form-control-md shadow" 
+                        <input name="price" className="form-control form-control-md " 
                         placeholder="e.g 0.05" value={mintPrice} onChange={ e => handlePriceChange(e) }/>
-                        <button className="btn btn-lg btn-primary" onClick={ () => updateMintPrice()}>
+                        <button className="btn btn-outline-dark" onClick={ () => updateMintPrice()}>
                             {mintProcess?"Processing...":"Set Mint Price"}
                         </button>
                     </div>
@@ -104,17 +104,17 @@ function ManageContract() {
 
             <div className="d-flex justify-content-evenly  mt-3">
                 <div class="d-grid gap-2 col-3 mx-auto">
-                    <button className="btn btn-lg btn-primary" disabled={nftEthBalance<=0?true:false} onClick={ () => withdrawFunds()}>
+                    <button className="btn btn-lg btn-outline-dark" disabled={nftEthBalance<=0?true:false} onClick={ () => withdrawFunds()}>
                         {withdrawProcess?"Processing...":"Withdraw"}
                     </button>
                 </div>
                 <div class="d-grid gap-2 col-3 mx-auto">
-                    <button className="btn btn-lg btn-primary" onClick={ () => pause_unpause()}>
+                    <button className="btn btn-lg btn-outline-dark" onClick={ () => pause_unpause()}>
                         {pauseProcess ? "Processing..." : nftPaused?"Unpause":"Pause"}
                     </button>
                 </div>
                 <div class="d-grid gap-2 col-3 mx-auto">
-                    <button className="btn btn-lg btn-primary" onClick={ () => updateAuction()}>
+                    <button className="btn btn-lg btn-outline-dark" onClick={ () => updateAuction()}>
                         {auctionProcess ? "Processing..." : nftAuctioned?"Deactivate Auction":"Activate Auction"}
                     </button>
                 </div>

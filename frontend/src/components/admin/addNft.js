@@ -67,7 +67,7 @@ function AddNft() {
                             <div style={{backgroundImage:`url(${nftImage? nftImage: Placeholder})`}} 
                             className="newNft-img" alt=""></div>
                         </div>
-                        <label htmlFor="nftImage" className="btn btn-primary my-2">
+                        <label htmlFor="nftImage" className="btn btn-outline-dark my-2">
                             Upload NFT Image
                         </label>
                         <input
@@ -121,7 +121,7 @@ function AddNft() {
                                     
                                     <div className="d-grid gap-2 mt-2">
                                         <button type="submit" value="Submit" 
-                                        className="btn btn-primary">Create NFT</button>
+                                        className="btn btn-outline-dark">Create NFT</button>
                                     </div>
                                 }
 
