@@ -15,7 +15,7 @@ function Nav({connectWallet,disconnectWallet}) {
                 </div>
             </nav> */}
             <nav className="navbar navbar-expand-lg bg-light border-bottom border-bottom-dark sticky-top" data-bs-theme="light">
-                <div className="container-fluid my-3 d-flex justify-content-between">
+                <div className="container my-3 d-flex justify-content-between">
                     {/* <h4>NeptuneGarden</h4> */}
                     <div class="navbar-brand logo" href="#">NeptuneGarden</div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,28 +24,29 @@ function Nav({connectWallet,disconnectWallet}) {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to={"/"} className="nav-link active" aria-current="page" >Home</Link>
+                                <Link to={"/"} className="nav-link sea-text active" aria-current="page" >Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={"/collection"} className="nav-link active" aria-current="page" >Collection</Link>
+                                <Link to={"/stake"} className="nav-link sea-text active" aria-current="page" >Stake</Link>
                             </li>
-                            {/* <li className="nav-item">
-                                <div className="nav-link" >Stake</div>
-                            </li> */}
                             {
                                 connected && admins.includes(userAddress) &&
                                 <li className="nav-item">
-                                    <Link to={"/admin"} className="nav-link">Admin</Link>
+                                    <Link to={"/admin"} className="nav-link sea-text">Admin</Link>
                                 </li>
                             }
                             
                         </ul>
                     </div>
-                    <div className="d-none d-md-block">
+
+
+                    <div className="d-flex navbar-text  d-none d-md-block">
+                        {/* <span className="me-2" style={{fontSize:"25px"}}><i className="fa fa-twitter text-sea"></i></span>
+                        <span className="me-2" style={{fontSize:"25px"}}><i className="fa fa-instagram text-sea"></i></span> */}
                     {
                         connected ?
                             <div>
-                                <button className="btn btn-outline-dark" onClick={()=>disconnectWallet()}>
+                                <button className="btn btn-lg btn-outline-sea sea-text" onClick={()=>disconnectWallet()}>
                                     <span className="me-1">
                                         {`${userAddress.substr(0,10)}...`}
                                     </span>
@@ -54,10 +55,9 @@ function Nav({connectWallet,disconnectWallet}) {
                             </div>
                         :
                             <div>
-                                <button className="btn btn-outline-dark" onClick={()=>connectWallet()}> <i className="fa fa-plug me-1"></i>Connect Wallet</button>
+                                <button className="btn btn-lg btn-outline-sea sea-text" onClick={()=>connectWallet()}> Connect Wallet</button>
                             </div>
                     }
-                        {/* <button className="btn btn-outline-dark">Connect Wallet</button> */}
                     </div>
                 </div>
             </nav>

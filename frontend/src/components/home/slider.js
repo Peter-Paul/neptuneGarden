@@ -7,10 +7,9 @@ import SlideNft from './slideNft';
 
 function Slider({nfts}) {
     return ( 
-        <div className='card'>
-          <div className='card-body'>
-            <h3 className='text-center text-sea mb-3'>Collection</h3>
-            <hr className='text-sea' />
+        <div className=''>
+            <h2 className='text-center text-light mb-3' style={{fontSize:"40px"}}>GALLERY</h2>
+            <hr />
             <Swiper
                 modules={[Autoplay ]}
                 loop={true}
@@ -30,7 +29,7 @@ function Slider({nfts}) {
                         spaceBetween: 100,
                       },
                       1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 180,
                       },
                 }}
@@ -41,8 +40,7 @@ function Slider({nfts}) {
                     <SwiperSlide id={nft.cid} ><SlideNft nft={nft} /></SwiperSlide>
                 ) )}
             </Swiper>
-            <hr className='text-sea' />
-          </div>
+            {/* <hr className='text-sea' /> */}
         </div>
      );
 }

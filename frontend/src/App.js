@@ -12,6 +12,7 @@ import { AlchemyProvider, BrowserProvider, Contract, formatEther } from 'ethers'
 import neptuneAbi from "./abis/neptune.json"
 import Admin from './pages/admin';
 import NftCollection from './pages/collection';
+import StakeNfts from './pages/stake';
 
 
 function App() {
@@ -82,13 +83,16 @@ function App() {
           </div>
           {/* <br className='my-5'></br> */}
           {/* BODY */}
-          <div className="container my-5" style={styles.content}>
+          <div className="my-5" style={styles.content}>
             <Routes>
               <Route  exact path="/"
                       element={ <Home nfts={nfts} /> }
               />
               <Route  exact path="/:name"
                       element={ <NftPage nfts={nfts} /> }
+              />
+              <Route  exact path="/stake"
+                      element={ <StakeNfts nfts={nfts} /> }
               />
               <Route  exact path="/collection"
                       element={ <NftCollection nfts={nfts} /> }
