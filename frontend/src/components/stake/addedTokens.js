@@ -3,7 +3,7 @@ import { Autoplay  } from 'swiper/modules';
 import 'swiper/css';
 import AddedToken from "./addedToken";
 
-function AddedTokens({nfts}) {
+function AddedTokens({nfts,removeNft}) {
     return ( 
             <div className="d-flex justify-content-center">
                 <div className='col-12 col-md-8'>
@@ -21,7 +21,7 @@ function AddedTokens({nfts}) {
                             onSwiper={(swiper) => console.log(swiper)}
                         >
                         {nfts.map( (nft) => (
-                            <SwiperSlide id={nft.id} ><AddedToken nft={nft} /></SwiperSlide>
+                            <SwiperSlide id={nft.id} ><AddedToken nft={nft} removeNft={removeNft}/></SwiperSlide>
                         ) )}
                     </Swiper>
                 </div>

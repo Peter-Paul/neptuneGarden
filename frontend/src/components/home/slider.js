@@ -25,12 +25,12 @@ function Slider({nfts}) {
                         spaceBetween: 0,
                       },
                       768: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 100,
                       },
                       1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 180,
+                        slidesPerView: 3,
+                        spaceBetween: 100,
                       },
                 }}
                 onSlideChange={() => console.log('slide change')}

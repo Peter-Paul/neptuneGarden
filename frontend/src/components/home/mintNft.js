@@ -1,18 +1,12 @@
 function MintNft({nft}) {
     return ( 
-        <div className="card newNft-card">
-            <div class="card-header text-center sea-text text-sea">
-                FEATURED
-            </div>
-            <div className="card-body">
+         
 
-                <div  className="newNft-holder shadow">
-                    <div style={{backgroundImage:`url(${nft.Image})`}} 
-                    className="newNft-img" alt=""></div>
-                </div>
-            </div>
-
+        <div  className="newNft-holder shadow my-5" >
+            <div style={{backgroundImage:`url(${nft.Image})`}} 
+            className="newNft-img" alt=""></div>
         </div>
+
         // <div className="card border-dark" style={{"width": "22rem"}}>
         //     <img src={`https://ipfs.io/ipfs/${nft.cid}/neptune.png`} className="card-img" alt="..." />
         //     <div class="card-img-overlay">

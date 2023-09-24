@@ -1,4 +1,4 @@
-import NFT from "../assets/nft1.png"
+import NFT from "../assets/n4.jpg"
 
 function WhyStake() {
     return ( 

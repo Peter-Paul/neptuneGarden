@@ -9,7 +9,7 @@ import MintNft from './mintNft';
 
 function MintSlider({nfts}) {
     return ( 
-        <>
+        
             <Swiper
                 modules={[Autoplay ]}
                 loop={true}
@@ -28,7 +28,7 @@ function MintSlider({nfts}) {
                     <SwiperSlide id={nft.cid} ><MintNft nft={nft} /></SwiperSlide>
                 ) )}
             </Swiper>
-        </>
+        
 
      );
 }

@@ -15,7 +15,8 @@ const initialState = {
     connected:undefined,
     nftPaused:undefined,
     nftEthBalance:undefined,
-    nftAuctioned:undefined
+    nftAuctioned:undefined,
+    isTestNet:undefined
 }
 
 export const appSlice = createSlice({
@@ -33,6 +34,7 @@ export const appSlice = createSlice({
             state.nftPaused = action.payload.nftPaused && action.payload.nftPaused
             state.nftEthBalance = action.payload.nftEthBalance && action.payload.nftEthBalance
             state.nftAuctioned = action.payload.nftAuctioned && action.payload.nftAuctioned
+            state.isTestNet = action.payload.isTestNet && action.payload.isTestNet
         },
 
         connectUser: (state,action) => {
