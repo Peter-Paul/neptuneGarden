@@ -44,7 +44,7 @@ function StakeNfts() {
    
     return ( 
         <>
-            <div className="d-none d-md-block">
+            <div className="d-none d-md-block mt-5">
 
                 <div className="container bg-sea-transparent shadow p-3" style={{minHeight:"70vh"}}>
 
@@ -66,14 +66,21 @@ function StakeNfts() {
                                 </div>
                             </>:
                             <div className="d-flex justify-content-center text-light" style={{height:"70vh", alignItems:"center"}}>
-                                <h2><strong>Please connect wallet to stake NFTs</strong></h2>
+                                <div className="d-flex flex-column">
+                                    <h2><strong>Please connect wallet to stake NFTs</strong></h2>
+                                    <div className="d-flex justify-content-center">
+                                        <button className="btn btn-lg btn-outline-light sea-text">
+                                            Connect Wallet
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                     }
 
                 </div>
             </div>
 
-            <div className="container d-block d-md-none bg-sea-transparent shadow p-3" style={{height:"70vh"}}>
+            <div className="container d-block d-md-none bg-sea-transparent shadow p-3 mt-5" style={{height:"70vh"}}>
                 <div className="d-flex justify-content-center text-light" style={{height:"70vh", alignItems:"center"}}>
                     <h2 className="text-center"><strong>Kindly use desktop to access Staking functionality!</strong></h2>
                 </div>

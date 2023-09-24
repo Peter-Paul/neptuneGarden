@@ -27,19 +27,19 @@ function Home({nfts}) {
                     <div  className="cover-holder shadow">
                         <div style={{backgroundImage:`url(${BG1})`}} 
                             className="d-flex justify-content-center cover-img" alt="">
-                                <div className=" container bg-light-transparent" style={{borderRadius:"60px"}}>
-                                    <div className="d-flex justify-content-center" style={styles.messageContainer}>
+                                <div className="p-3 container bg-light-transparent" style={{borderRadius:"60px"}}>
+                                    <div className="d-flex justify-content-center" >
                                         <div style={styles.message}>
-                                            
                                             <h1 className="logo text-dark  mb-4" style={{fontSize:"50px"}}>NeptuneGarden</h1>
+                                            
                                             <hr className=" mb-3" />
 
                                             <h1 className="display-4 text-center mb-5">
                                                 Advance public goods for Web3 and decentralized AI
                                             </h1>
 
-                                            <div className="d-flex justify-content-center">
-                                                <div class="d-grid gap-2 col-6">
+                                            <div className="d-flex justify-content-center mb-3">
+                                                <div className="d-grid gap-2 col-6">
                                                     <Link to="/collection">
                                                         <button className="btn btn-lg btn-outline-dark sea-text">View Collection</button>
                                                     </Link>
@@ -48,7 +48,7 @@ function Home({nfts}) {
 
                                         </div>
                                     </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
 
