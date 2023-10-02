@@ -1,4 +1,4 @@
-import BG1 from "../assets/n21.png"
+import BG1 from "../assets/bg3.png"
 
 
 function BottomCards() {
@@ -6,12 +6,12 @@ function BottomCards() {
         <>
             <div className="d-flex justify-content-evenly row">
                 <div className="card my-3 col-md-3 col-12" 
-                    style={{backgroundImage:`url(${BG1})`,height:"500px",backgroundPosition: "right",borderRadius:"60px"}}>
+                    style={{backgroundImage:`url(${BG1})`,height:"500px",backgroundPosition: "center",borderRadius:"60px"}}>
                     <div className="card-body mx-2 my-3 shadow-lg bg-light-transparent" style={{borderRadius:"60px"}}>
 
                         <div className="d-flex align-items-start flex-column mb-3" style={{height: "400px"}}>
                             <div className="mb-auto p-2">
-                                <h1 className="display-6 mt-4 sea-text" style={{fontSize:"30px"}}>
+                                <h1 className="mt-4" style={{fontSize:"30px"}}>
                                     <strong>Neptune’s Garden DAO</strong>
                                 </h1>
                             </div>
@@ -27,7 +27,7 @@ function BottomCards() {
                         
                         <div className="d-flex align-items-start flex-column mb-3" style={{height: "400px"}}>
                             <div className="mb-auto p-2">
-                                <h1 className="display-6 mt-4 sea-text" style={{fontSize:"30px"}}>
+                                <h1 className="mt-4" style={{fontSize:"30px"}}>
                                     <strong>Governance Forum</strong>
                                 </h1>
                             </div>
@@ -42,7 +42,7 @@ function BottomCards() {
                     <div className="card-body mx-2 my-3 shadow-lg bg-light-transparent" style={{borderRadius:"60px"}}>
                     <div className="d-flex align-items-start flex-column mb-3" style={{height: "400px"}}>
                             <div className="mb-auto p-2">
-                                <h1 className="display-6 mt-4 sea-text" style={{fontSize:"30px"}}>
+                                <h1 className="mt-4" style={{fontSize:"30px"}}>
                                     <strong>Voting Platform</strong>
                                 </h1>
                             </div>

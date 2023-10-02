@@ -5,7 +5,7 @@ function Community() {
     return ( 
         <>
             <div className="card shadow p-5" style={{backgroundColor:"#b8dbe1",borderRadius:"60px"}}>
-                <div className="card-body">
+                <div className="card-body my-5">
                     <div className="row">
                         <div className="col-12 col-md-6">
                             <h1 className="display-4 sea-text">
@@ -32,14 +32,14 @@ function Community() {
                             <h1 >“The ultimate decentralized community for incubating & funding decentralized AI projects”</h1>
                         </div>
                         <div className="col-12 col-md-4">
-                            <div className="d-flex justify-content-center">
+                            <div className="d-flex justify-content-end">
 
                                 <div className="pp-holder shadow">
                                     <div style={{backgroundImage:`url(${PP})`}} 
                                     className="pp-img" alt=""></div>
                                 </div>
                             </div>
-                            <p className="mt-2">Andrea Armanni, Growth Product Manager Ocean Protocol</p>
+                            <p className="mt-2 text-end">Andrea Armanni, Growth Product Manager Ocean Protocol</p>
                         </div>
                     </div>
                 </div>

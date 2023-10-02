@@ -94,8 +94,8 @@ body{
 
 .cover-holder {
   width: 100%;
-  height: 100vh;
-  min-height: 100vh;
+  height: 90vh;
+  min-height: 90vh;
   position: relative;
   /* border-radius: 200px; */
 }
@@ -106,13 +106,31 @@ body{
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* border-radius: 100%; */
+}
+
+.partners-holder {
+  width: 100%;
+  height: 15vh;
+  min-height: 15vh;
+  position: relative;
+  border-radius: 60px;
+}
+.partners-img{
+  height: 100%;
+  align-items: center;
+  position: relative;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  border-radius: 60px;
 }
 
 
 .logo{
-  color: #009dc4;
+  color: black;
   font-size: 28px;
 }
 
@@ -153,12 +171,16 @@ body{
   color: #009dc4;
 } 
 
-h2,h3,h4,h5,h6, .sea-text,.logo{
-  font-family: "Croissant One";
+h1,h2,h3,h4,h5,h6,p, .sea-text,.logo{
+  font-family: "Poppins";
+}
+
+.logo{
+  font-family: "Niconne";
 }
 
 p{
-  font-family: "Mulish";
+  /* font-family: "Mulish"; */
   font-size: 18px;
 }
 
@@ -175,7 +197,7 @@ p{
   left: 30px;
   width: 140px;
   height: 140px;
-  background: #009dc4;
+  background: black;
 }
 .ldio-okog2r8atk9 > div > div:nth-child(2) {
   top: 39.800000000000004px;
@@ -234,13 +256,13 @@ p{
 }
 
 .scaled-bg2{
-  background-color:#009dc4;
+  background-color:white ;
   background-image:
-  radial-gradient(circle at 100% 150%, #009dc4 24%, white 24%, white 28%, #009dc4 28%, #009dc4 36%, white 36%, white 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0    150%, #009dc4 24%, white 24%, white 28%, #009dc4 28%, #009dc4 36%, white 36%, white 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50%  100%, white 10%, #009dc4 10%, #009dc4 23%, white 23%, white 30%, #009dc4 30%, #009dc4 43%, white 43%, white 50%, #009dc4 50%, #009dc4 63%, white 63%, white 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, white 5%, #009dc4 5%, #009dc4 15%, white 15%, white 20%, #009dc4 20%, #009dc4 29%, white 29%, white 34%, #009dc4 34%, #009dc4 44%, white 44%, white 49%, transparent 49%, transparent),
-  radial-gradient(circle at 0    50%, white 5%, #009dc4 5%, #009dc4 15%, white 15%, white 20%, #009dc4 20%, #009dc4 29%, white 29%, white 34%, #009dc4 34%, #009dc4 44%, white 44%, white 49%, transparent 49%, transparent);
+  radial-gradient(circle at 100% 150%, white 24%, #009dc4 24%, #009dc4 28%, white 28%, white 36%, #009dc4 36%, #009dc4 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, white 24%, #009dc4 24%, #009dc4 28%, white 28%, white 36%, #009dc4 36%, #009dc4 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, #009dc4 10%, white 10%, white 23%, #009dc4 23%, #009dc4 30%, white 30%, white 43%, #009dc4 43%, #009dc4 50%, white 50%, white 63%, #009dc4 63%, #009dc4 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, #009dc4 5%, white 5%, white 15%, #009dc4 15%, #009dc4 20%, white 20%, white 29%, #009dc4 29%, #009dc4 34%, white 34%, white 44%, #009dc4 44%, #009dc4 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, #009dc4 5%, white 5%, white 15%, #009dc4 15%, #009dc4 20%, white 20%, white 29%, #009dc4 29%, #009dc4 34%, white 34%, white 44%, #009dc4 44%, #009dc4 49%, transparent 49%, transparent);
   background-size: 100px 50px;
   /* background-attachment: fixed; */
 }

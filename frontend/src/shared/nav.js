@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import P1 from "../assets/logo.png"
 
 function Nav({connectWallet,disconnectWallet}) {
     const {userAddress,connected,admins,baseUrl} = useSelector((state) => state.app)
@@ -17,8 +18,12 @@ function Nav({connectWallet,disconnectWallet}) {
             <nav className="navbar navbar-expand-lg bg-light border-bottom border-bottom-dark sticky-top" data-bs-theme="light">
                 <div className="container my-3 d-flex justify-content-between">
                     {/* <h4>NeptuneGarden</h4> */}
+                    <div className="partner-holder">
+                        <div style={{backgroundImage:`url(${P1})`}} 
+                        className="partner-img" alt=""></div>
+                    </div>
                     <div class="navbar-brand " href="#">
-                        <Link to={"/"} className="logo" style={{textDecoration:"none"}}>NeptuneGarden</Link>
+                        <Link to={"/"} className="logo" style={{textDecoration:"none", fontSize:"40px"}}>Neptune's Garden</Link>
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -36,7 +41,7 @@ function Nav({connectWallet,disconnectWallet}) {
                             
                                 <button className="btn btn-lg btn-dark sea-text" style={{borderRadius:"60px"}}>
                                     {/* Stake */}
-                                    <Link to={"/stake"} className="text-light" style={{textDecoration:"none"}} >Stake</Link>
+                                    <Link to={"/stake"} className="text-light" style={{textDecoration:"none"}} >STAKING</Link>
                                 </button>
                             }
                         </div>
